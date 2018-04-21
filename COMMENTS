@@ -1,0 +1,18 @@
+slcsp/
+------------------------
+To run, simply:
+
+`ruby slcsp.rb`
+
+NOTES:
+
+The script is idempotent and the results are written to slcsp.csv.
+
+This is all done in memory, which would not scale for large datasets
+or datasets of undetermined size, but otherwise works quite well for
+this particular type of scenario.
+
+Assumptions regarding edge/nil cases:
+* zero or more than one rate area per zip
+* no silver plans in rate area
+* only one silver plan in rate area with a unique rate (i.e. no second lowest)
